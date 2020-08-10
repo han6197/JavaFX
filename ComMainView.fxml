@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComMainController">
+   <children>
+      <SplitPane dividerPositions="0.9" layoutX="86.0" layoutY="140.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="240.0">
+               <children>
+                  <TableView fx:id="comTable" layoutX="59.0" layoutY="8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="cname" prefWidth="75.0" text="부품 이름" />
+                      <TableColumn fx:id="cnumber" prefWidth="75.0" text="부품 코드" />
+                        <TableColumn fx:id="ccount" prefWidth="75.0" text="수량" />
+                        <TableColumn fx:id="cloc" prefWidth="75.0" text="위치" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button layoutX="60.0" layoutY="11.0" mnemonicParsing="false" onAction="#addAction" text="추가" />
+                  <Button layoutX="150.0" layoutY="11.0" mnemonicParsing="false" onAction="#editAction" text="수정" />
+                  <Button layoutX="240.0" layoutY="11.0" mnemonicParsing="false" onAction="#deleteAction" text="삭제" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
